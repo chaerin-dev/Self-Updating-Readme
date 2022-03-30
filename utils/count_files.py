@@ -11,7 +11,7 @@ def count_files():
         file_list = os.listdir(f"./{directory}")
         file_count = len(file_list)
         temp = [directory, file_count]
-        file_info.append(temp)
+        files_info.append(temp)
         total_file_count += file_count
     return files_info, total_file_count
   
