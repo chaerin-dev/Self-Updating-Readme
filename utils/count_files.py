@@ -6,7 +6,7 @@ import os
 def count_files():
     files_info = []
     total_file_count = 0
-    directory_list = [directory for directory in os.listdir("./")]
+    directory_list = [directory for directory in os.listdir("./") if "FILE" in directory]
     for directory in directory_list:
         file_list = os.listdir(f"./{directory}")
         file_count = len(file_list)
@@ -42,5 +42,5 @@ def update_readme():
 
 if __name__ == "__main__":
     readme = update_readme()
-    with open("README.md", 'w', encoding='utf-8') as f:
+    with open("./README.md", 'w', encoding='utf-8') as f:
         f.write(readme)
