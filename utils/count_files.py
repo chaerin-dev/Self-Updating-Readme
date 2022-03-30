@@ -7,6 +7,7 @@ def count_files():
     files_info = []
     total_file_count = 0
     directory_list = [directory for directory in os.listdir("./") if "Folder" in directory]
+    directory_list.sort()
     for directory in directory_list:
         file_list = os.listdir(f"./{directory}")
         file_count = len(file_list)
